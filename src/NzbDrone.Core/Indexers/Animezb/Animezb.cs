@@ -40,7 +40,7 @@ namespace NzbDrone.Core.Indexers.Animezb
         {
             get
             {
-                yield return "https://animezb.com/rss/?cat=anime&max=100";
+                yield return "https://animezb.com/rss?cat=anime&max=100";
             }
         }
 

@@ -104,6 +104,7 @@ namespace NzbDrone.Core.Test.ParserTests
         [TestCase("[Doki] Mahouka Koukou no Rettousei - 07 (1280x720 Hi10P AAC) [80AF7DDE]", false)]
         [TestCase("[Doremi].Yes.Pretty.Cure.5.Go.Go!.31.[1280x720].[C65D4B1F].mkv", false)]
         [TestCase("[HorribleSubs]_Fairy_Tail_-_145_[720p]", false)]
+        [TestCase("[Eveyuu] No Game No Life - 10 [Hi10P 1280x720 H264][10B23BD8]", false)]
         public void should_parse_hdtv720p_quality(string title, bool proper)
         {
             ParseAndVerifyQuality(title, Quality.HDTV720p, proper);
@@ -153,6 +154,10 @@ namespace NzbDrone.Core.Test.ParserTests
         [TestCase("Chuck - S01E03 - Come Fly With Me - 720p BluRay.mkv", false)]
         [TestCase("The Big Bang Theory.S03E01.The Electric Can Opener Fluctuation.m2ts", false)]
         [TestCase("Revolution.S01E02.Chained.Heat.[Bluray720p].mkv", false)]
+        [TestCase("[FFF] DATE A LIVE - 01 [BD][720p-AAC][0601BED4]", false)]
+        [TestCase("[coldhell] Pupa v3 [BD720p][03192D4C]", false)]
+        [TestCase("[RandomRemux] Nobunagun - 01 [720p BD][043EA407].mkv", false)]
+        [TestCase("[Kaylith] Isshuukan Friends Specials - 01 [BD 720p AAC][B7EEE164].mkv", false)]
         public void should_parse_bluray720p_quality(string title, bool proper)
         {
             ParseAndVerifyQuality(title, Quality.Bluray720p, proper);
@@ -161,6 +166,9 @@ namespace NzbDrone.Core.Test.ParserTests
         [TestCase("Chuck - S01E03 - Come Fly With Me - 1080p BluRay.mkv", false)]
         [TestCase("Sons.Of.Anarchy.S02E13.1080p.BluRay.x264-AVCDVD", false)]
         [TestCase("Revolution.S01E02.Chained.Heat.[Bluray1080p].mkv", false)]
+        [TestCase("[FFF] Namiuchigiwa no Muromi-san - 10 [BD][1080p-FLAC][0C4091AF]", false)]
+        [TestCase("[coldhell] Pupa v2 [BD1080p][5A45EABE].mkv", false)]
+        [TestCase("[Kaylith] Isshuukan Friends Specials - 01 [BD 1080p FLAC][429FD8C7].mkv", false)]
         public void should_parse_bluray1080p_quality(string title, bool proper)
         {
             ParseAndVerifyQuality(title, Quality.Bluray1080p, proper);
