@@ -75,6 +75,7 @@ namespace NzbDrone.Core.Test.ParserTests
         [TestCase("[FroZen] Miyuki - 23 [DVD][7F6170E6]", false)]
         [TestCase("Hannibal.S01E05.576p.BluRay.DD5.1.x264-HiSD", false)]
         [TestCase("Hannibal.S01E05.480p.BluRay.DD5.1.x264-HiSD", false)]
+        [TestCase("Heidi Girl of the Alps (BD)(640x480(RAW) (BATCH 1) (1-13)", false)]
         public void should_parse_dvd_quality(string title, bool proper)
         {
             ParseAndVerifyQuality(title, Quality.DVD, proper);
@@ -169,6 +170,7 @@ namespace NzbDrone.Core.Test.ParserTests
         [TestCase("[FFF] Namiuchigiwa no Muromi-san - 10 [BD][1080p-FLAC][0C4091AF]", false)]
         [TestCase("[coldhell] Pupa v2 [BD1080p][5A45EABE].mkv", false)]
         [TestCase("[Kaylith] Isshuukan Friends Specials - 01 [BD 1080p FLAC][429FD8C7].mkv", false)]
+        [TestCase("[Zurako] Log Horizon - 01 - The Apocalypse (BD 1080p AAC) [7AE12174].mkv", false)]
         public void should_parse_bluray1080p_quality(string title, bool proper)
         {
             ParseAndVerifyQuality(title, Quality.Bluray1080p, proper);
