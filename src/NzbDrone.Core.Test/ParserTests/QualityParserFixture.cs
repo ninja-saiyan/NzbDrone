@@ -159,6 +159,7 @@ namespace NzbDrone.Core.Test.ParserTests
         [TestCase("[coldhell] Pupa v3 [BD720p][03192D4C]", false)]
         [TestCase("[RandomRemux] Nobunagun - 01 [720p BD][043EA407].mkv", false)]
         [TestCase("[Kaylith] Isshuukan Friends Specials - 01 [BD 720p AAC][B7EEE164].mkv", false)]
+        [TestCase("[EG]Turn-A Gundam Movie II 720p(BD).mkv", false)]
         public void should_parse_bluray720p_quality(string title, bool proper)
         {
             ParseAndVerifyQuality(title, Quality.Bluray720p, proper);
