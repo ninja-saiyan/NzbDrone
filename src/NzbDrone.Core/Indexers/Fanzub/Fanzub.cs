@@ -8,7 +8,7 @@ namespace NzbDrone.Core.Indexers.Fanzub
 {
     public class Fanzub : IndexerBase<NullConfig>
     {
-        private static readonly Regex RemoveCharactersRegex = new Regex(@"[!?]", RegexOptions.Compiled);
+        private static readonly Regex RemoveCharactersRegex = new Regex(@"[!?`]", RegexOptions.Compiled);
 
         public override DownloadProtocol Protocol
         {

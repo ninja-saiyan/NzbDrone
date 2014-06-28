@@ -8,7 +8,7 @@ namespace NzbDrone.Core.Indexers.Animezb
 {
     public class Animezb : IndexerBase<NullConfig>
     {
-        private static readonly Regex RemoveCharactersRegex = new Regex(@"[!?]", RegexOptions.Compiled);
+        private static readonly Regex RemoveCharactersRegex = new Regex(@"[!?`]", RegexOptions.Compiled);
         private static readonly Regex RemoveSingleCharacterRegex = new Regex(@"\b[a-z0-9]\b", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         private static readonly Regex DuplicateCharacterRegex = new Regex(@"[ +]{2,}", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 

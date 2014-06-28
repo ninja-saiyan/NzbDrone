@@ -98,7 +98,7 @@ namespace NzbDrone.Core.Indexers
         {
             _logger.Debug("Searching for {0}", searchCriteria);
 
-            var searchUrls = indexer.GetAnimeEpisodeSearchUrls(searchCriteria.QueryTitles, searchCriteria.Series.TvRageId, searchCriteria.AbsoluteEpisodeNumber);
+            var searchUrls = indexer.GetAnimeEpisodeSearchUrls(searchCriteria.SceneTitles, searchCriteria.Series.TvRageId, searchCriteria.AbsoluteEpisodeNumber);
             var result = Fetch(indexer, searchUrls);
             _logger.Info("Finished searching {0} for {1}. Found {2}", indexer, searchCriteria, result.Count);
 
